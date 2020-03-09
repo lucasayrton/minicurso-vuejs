@@ -178,6 +178,6 @@ export default {
 <style scoped lang="scss">
 .container {
   margin-top: 20px;
-  width: 50% !important;
+  width: 40% !important;
 }
 </style>
