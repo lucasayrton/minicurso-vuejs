@@ -1,0 +1,80 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Luquita",
+      "cpf": "278.550.330-92",
+      "dataNascimento": "05/07/1995",
+      "email": "luquita@gmail.com"
+    },
+    {
+      "id": 2,
+      "nome": "Vinilsonn",
+      "cpf": "738.838.950-40",
+      "dataNascimento": "16/03/1998",
+      "email": "vinilson@gmail.com"
+    },
+    {
+      "id": 3,
+      "nome": "Carlex",
+      "cpf": "329.021.350-17",
+      "dataNascimento": "30/11/1990",
+      "email": "carlex@gmail.com"
+    },
+    {
+      "id": 5,
+      "nome": "Fabim",
+      "email": "fabim@gmail.com",
+      "cpf": "156.148.948-97",
+      "dataNascimento": "10/10/2020"
+    },
+    {
+      "id": 6,
+      "nome": "XL",
+      "email": "gisele@gmail.com",
+      "cpf": "256.128.948-74",
+      "dataNascimento": "01/01/1995"
+    },
+    {
+      "id": 7,
+      "nome": "Fabex",
+      "email": "fabio@gmail.com",
+      "cpf": "156.489.789-12",
+      "dataNascimento": "01/10/1990"
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "JavaScript Avançado",
+      "vagas": "150"
+    },
+    {
+      "id": 2,
+      "nome": "C# Intermediário",
+      "vagas": "100"
+    },
+    {
+      "id": 3,
+      "nome": "VueJS Iniciante",
+      "vagas": "50"
+    },
+    {
+      "id": 4,
+      "nome": "VueJS Intermediário",
+      "vagas": "30"
+    }
+  ],
+  "matriculas": [
+    {
+      "id": 1,
+      "nomeAluno": "Carlex",
+      "nomeCurso": "VueJS Iniciante"
+    },
+    {
+      "id": 2,
+      "nomeAluno": "Luquita",
+      "nomeCurso": "JavaScript Avançado"
+    }
+  ]
+}
