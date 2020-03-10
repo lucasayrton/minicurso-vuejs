@@ -78,12 +78,6 @@
           mdi-delete
         </v-icon>
       </template>
-      <template v-slot:no-data>
-        <v-progress-circular
-          indeterminate
-          color="primary"
-        ></v-progress-circular>
-      </template>
     </v-data-table>
   </div>
 </template>
@@ -196,7 +190,10 @@ export default {
     save() {
       if (this.editedId > -1) {
         axios
-          .put(`${process.env.VUE_APP_SERVER_URI}/alunos/${this.editedId}`, this.editedItem)
+          .put(
+            `${process.env.VUE_APP_SERVER_URI}/alunos/${this.editedId}`,
+            this.editedItem
+          )
           .then(
             Object.assign(
               this.alunos[this.alunos.findIndex(a => a.id === this.editedId)],

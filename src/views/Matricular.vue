@@ -58,12 +58,6 @@
           </v-dialog>
         </v-toolbar>
       </template>
-      <template v-slot:no-data>
-        <v-progress-circular
-          indeterminate
-          color="primary"
-        ></v-progress-circular>
-      </template>
     </v-data-table>
   </div>
 </template>
