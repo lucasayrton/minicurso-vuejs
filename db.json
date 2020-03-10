@@ -30,7 +30,7 @@
     },
     {
       "id": 6,
-      "nome": "XL",
+      "nome": "Gisele",
       "email": "gisele@gmail.com",
       "cpf": "256.128.948-74",
       "dataNascimento": "01/01/1995"
@@ -40,6 +40,13 @@
       "nome": "Fabex",
       "email": "fabio@gmail.com",
       "cpf": "156.489.789-12",
+      "dataNascimento": "01/10/1990"
+    },
+    {
+      "id": 8,
+      "nome": "Anderson",
+      "email": "anderson@gmail.com",
+      "cpf": "215.629.845-89",
       "dataNascimento": "01/10/1990"
     }
   ],

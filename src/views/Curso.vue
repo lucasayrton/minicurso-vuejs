@@ -124,7 +124,7 @@ export default {
   methods: {
     initialize() {
       axios
-        .get("http://localhost:3000/cursos")
+        .get(`${process.env.VUE_APP_SERVER_URI}/cursos`)
         .then(response => (this.cursos = response.data))
         .catch(err => console.error(err));
     },
@@ -139,7 +139,7 @@ export default {
       const index = this.cursos.findIndex(a => a.id === item.id);
       confirm("Você tem certeza que deseja excluir este curso?") &&
         axios
-          .delete(`http://localhost:3000/cursos/${item.id}`)
+          .delete(`${process.env.VUE_APP_SERVER_URI}/cursos/${item.id}`)
           .then(this.cursos.splice(index, 1))
           .catch(err => console.error(err));
     },
@@ -155,7 +155,7 @@ export default {
     save() {
       if (this.editedId > -1) {
         axios
-          .put(`http://localhost:3000/cursos/${this.editedId}`, this.editedItem)
+          .put(`${process.env.VUE_APP_SERVER_URI}/cursos/${this.editedId}`, this.editedItem)
           .then(
             Object.assign(
               this.cursos[this.cursos.findIndex(c => c.id === this.editedId)],
@@ -165,7 +165,7 @@ export default {
           .catch(err => console.error(err));
       } else {
         axios
-          .post("http://localhost:3000/cursos", this.editedItem)
+          .post(`${process.env.VUE_APP_SERVER_URI}/cursos`, this.editedItem)
           .then(response => this.cursos.push(response.data))
           .catch(err => console.error(err));
       }

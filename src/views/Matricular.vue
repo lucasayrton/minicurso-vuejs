@@ -70,12 +70,8 @@
 
 <script>
 import axios from "axios";
-import { mask } from "vue-the-mask";
 
 export default {
-  directives: {
-    mask
-  },
   data: () => ({
     rules: {
       required: value => !!value || "Campo obrigatório"
@@ -105,12 +101,6 @@ export default {
     }
   }),
 
-  computed: {
-    formTitle() {
-      return this.editedId === -1 ? "Novo Curso" : "Editar Curso";
-    }
-  },
-
   watch: {
     dialog(val) {
       val || this.close();
@@ -124,7 +114,7 @@ export default {
   methods: {
     initialize() {
       axios
-        .get("http://localhost:3000/matriculas")
+        .get(`${process.env.VUE_APP_SERVER_URI}/matriculas`)
         .then(response => {
           this.matriculas = response.data;
           this.carregarAlunosDasMatriculas();
@@ -135,14 +125,14 @@ export default {
 
     carregarAlunosDasMatriculas() {
       axios
-        .get("http://localhost:3000/alunos")
+        .get(`${process.env.VUE_APP_SERVER_URI}/alunos`)
         .then(response => (this.alunos = response.data))
         .catch(err => console.error(err));
     },
 
     carregarCursosDasMatriculas() {
       axios
-        .get("http://localhost:3000/cursos")
+        .get(`${process.env.VUE_APP_SERVER_URI}/cursos`)
         .then(response => (this.cursos = response.data))
         .catch(err => console.error(err));
     },
@@ -157,7 +147,7 @@ export default {
 
     save() {
       axios
-        .post("http://localhost:3000/matriculas", this.editedItem)
+        .post(`${process.env.VUE_APP_SERVER_URI}/matriculas`, this.editedItem)
         .then(response => this.matriculas.push(response.data))
         .catch(err => console.error(err));
       this.close();
